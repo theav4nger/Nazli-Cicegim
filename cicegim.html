@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Benim Gelincik Çiçeğime Mektup</title>
+  <style>
+    body {
+      font-family: "Georgia", serif;
+      background: #fff7fa;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .envelope {
+      width: 380px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      padding: 25px;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.4s ease;
+    }
+
+    .envelope:hover {
+      transform: scale(1.03);
+    }
+
+    .emoji {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    #letter {
+      display: none;
+      position: absolute;
+      width: 85%;
+      max-width: 450px;
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.15);
+      animation: fadeIn 0.6s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .close-btn {
+      text-align: right;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .gelincik {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .heart-row {
+      font-size: 26px;
+      margin: 10px 0 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ZARF -->
+  <div class="envelope" onclick="openLetter()">
+    <div class="emoji">💌</div>
+    <h2>Sevgilim… Tıkla ve aç ❤️</h2>
+    <p>Benim gelincik çiçeğime küçük bir mektup bıraktım…</p>
+  </div>
+
+  <!-- MEKTUP -->
+  <div id="letter">
+    <div class="close-btn" onclick="closeLetter()">✖</div>
+
+    <img src="c:\Users\necati.erol.SECOMTR\Downloads\cicek.png" alt="Gelincik" class="gelincik">
+
+    <div class="heart-row">💚 🎀💗 💚 🎀💗</div>
+
+    <h2>Benim güzel gelincik çiçeğim,</h2>
+
+    <p>
+      Ne kadar uzakta olsam da, sana duyduğum hisler hep yanında.<br><br>
+      Seninle konuşurken içimde bir yerde hep bir <b>yeşil kalp 💚</b> filizleniyor.<br>
+      Sana her sarılmayı düşündüğümde ise pembe bir <b>kurdeleli kalp 🎀💗</b> kendiliğinden beliriyor.<br><br>
+
+      Bugün ALES’ten nasıl çıkmış olursan ol, benim gözümde sen hep<br>
+      <b>başaran, güçlü, ışıl ışıl ve umut dolu</b> bir insansın.<br><br>
+
+      Benim gelincik çiçeğim…<br>
+      Kırılgan görünüp içinde bu kadar cesaret barındırman beni hep büyülüyor.<br><br>
+
+      İyi ki varsın.  
+      İyi ki kalbimin en güzel köşesini yeşile ve pembeye boyadın.  
+      Seni çok seviyorum.  
+    </p>
+
+    <div class="heart-row">💚 🎀💗 💚 🎀💗</div>
+  </div>
+
+  <script>
+    function openLetter() {
+      document.querySelector(".envelope").style.display = "none";
+      document.getElementById("letter").style.display = "block";
+    }
+
+    function closeLetter() {
+      document.getElementById("letter").style.display = "none";
+      document.querySelector(".envelope").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
